@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <h1>TO Do List App</h1>
+    <ul id="activity_list">
+        <li>Taking a class</li>
+        <li>Personal Task</li>
+    </ul>
+    
+    <button id="Add-activity">Add Task</button>
+    <button id="Delete-activity">Remove Task</button>
+</body>
+</html>   
+<script>
+  const task_list = document.getElementById("activity_list");
+  const new_task = document.getElementById("Add-activity");
+  const remove_task = document.getElementById("Delete-activity");
+  
+  new_task.addEventListener("click",function() {
+    const new_activity = prompt("Enter the new activity which you want to add")
+    console.log("new-activity:",new_activity);
+    if (!new_activity){
+        console.log("Please enter the data");
+        return;
+    } else{
+        const new_activityitem = document.createElement("li");
+        new_activityitem.textContent = new_activity;
+        task_list.appendChild(new_activityitem);
+    };
+  });
+  remove_task.addEventListener("click",function(){
+    new_task.removeEventListener("click",task_list.removeChild);
+    
+  }); 
+</script>
+
+
+
+    

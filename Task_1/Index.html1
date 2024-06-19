@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<htmll lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Task</title>
+</head>
+<body>
+    
+    <p>It is a first Task</p>
+
+
+    <script>
+      console.log("Anything")
+    </script>    
+</body>
+</htmll>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body>
+    <h1>Add to Cart</h1>
+    <div class = "box">
+    <ul id = "Item-List">
+        <li>Jeans</li>
+        <li>Trouser</li>
+    </ul>    
+    
+    <button id="btn-add-item">Add New item</button>
+    </div>
+</body>
+</html>
+<script>
+    const listElem = document.getElementById("Item-List");
+    const additem = document.getElementById("btn-add-item");
+    additem.addEventListener("click",function(){
+        const item = prompt("add the item");
+        console.log("item:",item);
+        if (!item) {
+            console.log("Please add the item");
+            return;    
+        } else {
+            const listitem = document.createElement("li");
+            listitem.textContent = item;
+            listElem.appendChild(listitem);
+        }
+
+    });
+</script>
